@@ -1,13 +1,15 @@
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 declare global {
-	namespace App {
+    namespace App {
         interface Platform {
-            env: Env
+            env: {
+                DB: D1Database
+            }
             cf: CfProperties
             ctx: ExecutionContext
         }
     }
 }
 
-export {};
+export { };

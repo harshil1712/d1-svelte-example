@@ -1,6 +1,6 @@
-import type { RequestHandler } from "@sveltejs/kit";
+import type { RequestHandler } from './$types';
 
-/** @type {import('@sveltejs/kit').RequestHandler} */
+/** @type {import('./$types').RequestHandler} */
 export async function GET({ request, platform }) {
     let result = await platform.env.DB.prepare(
         "SELECT * FROM Customers LIMIT 5"
